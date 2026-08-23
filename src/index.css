@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0B1D33;
+  --color-ink-2: #14283F;
+  --color-gold: #B8925A;
+  --color-gold-soft: #D9C298;
+  --color-cream: #F6F1E7;
+  --color-parchment: #FBF8F2;
+  --color-charcoal: #211E1A;
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-body);
+}
+
+.tape-rule {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-gold) 15%, var(--color-gold) 85%, transparent);
+}
+.tape-rule::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--color-gold) 0,
+    var(--color-gold) 1px,
+    transparent 1px,
+    transparent 12px
+  );
+  opacity: 0.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
