@@ -3,16 +3,27 @@ import { Link } from 'react-router-dom';
 import founderFitting from '../assets/founder-fitting.jpg';
 import suitingTux from '../assets/suiting-tux-fitting.jpg';
 import shirtingCollar from '../assets/shirting-houndstooth-collar.jpg';
+import suitingEditorial from '../assets/suiting-editorial-plaid.jpg';
+import suitingShoeDetail from '../assets/suiting-shoe-detail.jpg';
+import editorialBriefcase from '../assets/editorial-briefcase.jpg';
+import editorialRedCanopy from '../assets/editorial-red-canopy.jpg';
+import detailCuffWatch from '../assets/detail-cuff-watch.jpg';
+import detailButtoning from '../assets/detail-buttoning.jpg';
 
-const CATEGORIES = ['All', 'Suiting', 'Shirting', 'Fittings', 'Corporate'];
+const CATEGORIES = ['All', 'Suiting', 'Shirting', 'Fittings', 'Corporate', 'Editorial', 'Details'];
 
 const ITEMS = [
+  { img: suitingEditorial, category: 'Suiting', caption: 'Double-breasted plaid suit — editorial' },
   { img: suitingTux, category: 'Suiting', caption: 'Velvet tuxedo — wedding commission' },
   { img: shirtingCollar, category: 'Shirting', caption: 'Houndstooth shirt with contrast collar and cuff' },
   { img: founderFitting, category: 'Fittings', caption: 'A fitting in progress — swatches and buttons on the table' },
-  { placeholder: true, category: 'Suiting', caption: 'Sport coat — coming soon' },
   { placeholder: true, category: 'Corporate', caption: 'Team uniform program — coming soon' },
   { placeholder: true, category: 'Fittings', caption: 'Client fitting — coming soon' },
+  { img: editorialBriefcase, category: 'Editorial', caption: 'Plaid double-breasted suit, city backdrop' },
+  { img: editorialRedCanopy, category: 'Editorial', caption: 'Plaid suit against architectural red canopy' },
+  { img: suitingShoeDetail, category: 'Details', caption: 'Branded sole and trouser break' },
+  { img: detailCuffWatch, category: 'Details', caption: 'Cuff, watch, and ring detail' },
+  { img: detailButtoning, category: 'Details', caption: 'Buttoning the jacket — cufflink detail' },
 ];
 
 export default function Gallery() {
