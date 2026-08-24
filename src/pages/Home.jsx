@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Ruler, Scissors, Shirt, Church } from 'lucide-react';
+import { Ruler, Scissors, Shirt, Church, BookOpen } from 'lucide-react';
 
 const OFFERINGS = [
   {
@@ -101,6 +101,35 @@ export default function Home() {
                 </span>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Essential Edge CTA */}
+      <section className="py-24">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="grid items-center gap-10 border border-[var(--color-gold)]/40 bg-[var(--color-ink)] p-10 sm:grid-cols-[auto_1fr_auto] sm:p-14">
+            <BookOpen className="mx-auto text-[var(--color-gold)] sm:mx-0" size={40} strokeWidth={1.3} />
+            <div className="text-center sm:text-left">
+              <span className="font-[family-name:var(--font-body)] text-xs uppercase tracking-[0.28em] text-[var(--color-gold)]">
+                From The Dapper Gentleman
+              </span>
+              <h2 className="mt-3 font-[family-name:var(--font-display)] text-3xl text-[var(--color-cream)] sm:text-4xl">
+                The Essential Edge Bundle
+              </h2>
+              <p className="mt-3 max-w-md font-[family-name:var(--font-body)] text-sm leading-relaxed text-[var(--color-cream)]/70">
+                A beginner's guide to fit, colour, and buying well — start
+                dressing with intention before your first fitting.
+              </p>
+            </div>
+            <a
+              href="https://thedapgent.github.io/tdgpress"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whitespace-nowrap rounded-sm bg-[var(--color-gold)] px-7 py-3.5 text-center font-[family-name:var(--font-body)] text-xs uppercase tracking-[0.16em] text-[var(--color-ink)] transition-colors hover:bg-[var(--color-gold-soft)]"
+            >
+              Get the Guide
+            </a>
           </div>
         </div>
       </section>
