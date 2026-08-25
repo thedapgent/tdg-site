@@ -25,13 +25,13 @@ export default function Header() {
           The Dapper Gentleman
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-5 md:flex lg:gap-7">
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `font-[family-name:var(--font-body)] text-[13px] uppercase tracking-[0.14em] transition-colors ${
+                `whitespace-nowrap font-[family-name:var(--font-body)] text-[12px] uppercase tracking-[0.1em] transition-colors lg:text-[13px] lg:tracking-[0.14em] ${
                   isActive
                     ? 'text-[var(--color-gold)]'
                     : 'text-[var(--color-cream)]/80 hover:text-[var(--color-gold)]'
@@ -43,7 +43,7 @@ export default function Header() {
           ))}
           <a
             href="https://consulting.thedappergentleman.ca/"
-            className="rounded-sm border border-[var(--color-gold)] px-4 py-2 font-[family-name:var(--font-body)] text-[12px] uppercase tracking-[0.14em] text-[var(--color-gold)] transition-colors hover:bg-[var(--color-gold)] hover:text-[var(--color-ink)]"
+            className="whitespace-nowrap rounded-sm border border-[var(--color-gold)] px-3 py-2 font-[family-name:var(--font-body)] text-[11px] uppercase tracking-[0.1em] text-[var(--color-gold)] transition-colors hover:bg-[var(--color-gold)] hover:text-[var(--color-ink)] lg:px-4 lg:text-[12px] lg:tracking-[0.14em]"
           >
             Consulting
           </a>
