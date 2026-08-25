@@ -22,6 +22,7 @@ export default function Footer() {
               <li><a className="hover:text-[var(--color-gold)]" href="/services">Services</a></li>
               <li><a className="hover:text-[var(--color-gold)]" href="/pricing">Pricing</a></li>
               <li><a className="hover:text-[var(--color-gold)]" href="/gallery">Gallery</a></li>
+              <li><a className="hover:text-[var(--color-gold)]" href="/of-the-cloth">Of the Cloth</a></li>
               <li><a className="hover:text-[var(--color-gold)]" href="https://consulting.thedappergentleman.ca/">Consulting</a></li>
             </ul>
           </div>
