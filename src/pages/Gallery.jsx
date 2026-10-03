@@ -9,12 +9,15 @@ import editorialBriefcase from '../assets/editorial-briefcase.jpg';
 import editorialRedCanopy from '../assets/editorial-red-canopy.jpg';
 import detailCuffWatch from '../assets/detail-cuff-watch.jpg';
 import detailButtoning from '../assets/detail-buttoning.jpg';
+import suitingGroomsmen from '../assets/suiting-groomsmen.jpg';
+import detailPhotoLining from '../assets/detail-photo-lining.jpg';
 
 const CATEGORIES = ['All', 'Suiting', 'Shirting', 'Fittings', 'Corporate', 'Editorial', 'Details'];
 
 const ITEMS = [
   { img: suitingEditorial, category: 'Suiting', caption: 'Double-breasted plaid suit — editorial' },
   { img: suitingTux, category: 'Suiting', caption: 'Velvet tuxedo — wedding commission' },
+  { img: suitingGroomsmen, category: 'Suiting', caption: 'Groom and groomsmen — cream suits, wedding commission' },
   { img: shirtingCollar, category: 'Shirting', caption: 'Houndstooth shirt with contrast collar and cuff' },
   { img: founderFitting, category: 'Fittings', caption: 'A fitting in progress — swatches and buttons on the table' },
   { placeholder: true, category: 'Corporate', caption: 'Team uniform program — coming soon' },
@@ -24,6 +27,7 @@ const ITEMS = [
   { img: suitingShoeDetail, category: 'Details', caption: 'Branded sole and trouser break' },
   { img: detailCuffWatch, category: 'Details', caption: 'Cuff, watch, and ring detail' },
   { img: detailButtoning, category: 'Details', caption: 'Buttoning the jacket — cufflink detail' },
+  { img: detailPhotoLining, category: 'Details', caption: "Custom photo-collage jacket lining — groom's tuxedo" },
 ];
 
 export default function Gallery() {
