@@ -17,7 +17,7 @@ const CATEGORIES = ['All', 'Suiting', 'Shirting', 'Fittings', 'Corporate', 'Edit
 const ITEMS = [
   { img: suitingEditorial, category: 'Suiting', caption: 'Double-breasted plaid suit — editorial' },
   { img: suitingTux, category: 'Suiting', caption: 'Velvet tuxedo — wedding commission' },
-  { img: suitingGroomsmen, category: 'Suiting', caption: 'Groom and groomsmen — cream suits, wedding commission' },
+  { img: suitingGroomsmen, category: 'Suiting', caption: 'Groomsmen party — cream suits, wedding commission' },
   { img: shirtingCollar, category: 'Shirting', caption: 'Houndstooth shirt with contrast collar and cuff' },
   { img: founderFitting, category: 'Fittings', caption: 'A fitting in progress — swatches and buttons on the table' },
   { placeholder: true, category: 'Corporate', caption: 'Team uniform program — coming soon' },
