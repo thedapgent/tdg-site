@@ -1,5 +1,12 @@
 import { Link } from 'react-router-dom';
 import { Cross, BookOpen, Shirt } from 'lucide-react';
+import randyReidPurple from '../assets/otc-randy-reid-purple.jpg';
+
+const GALLERY_ITEMS = [
+  { img: randyReidPurple, label: 'Randy Reid', caption: 'Custom clergy shirt, preaching' },
+  { placeholder: true, label: 'Clergy suit', caption: 'Coming soon' },
+  { placeholder: true, label: 'Custom stole', caption: 'Coming soon' },
+];
 
 const SERVICES = [
   {
@@ -71,7 +78,7 @@ export default function OfTheCloth() {
         </div>
       </section>
 
-      {/* Gallery teaser — honest placeholders, no real photos yet */}
+      {/* Gallery teaser */}
       <section className="mx-auto max-w-5xl px-6 py-24">
         <div className="text-center">
           <span className="font-[family-name:var(--font-body)] text-xs uppercase tracking-[0.28em] text-[var(--color-gold)]">
@@ -82,19 +89,32 @@ export default function OfTheCloth() {
           </h2>
         </div>
         <div className="mt-14 grid gap-6 sm:grid-cols-3">
-          {['Preaching robe', 'Clergy suit', 'Custom stole'].map((label) => (
-            <div
-              key={label}
-              className="flex aspect-[4/5] flex-col items-center justify-center border border-dashed border-[var(--color-ink)]/20 bg-[var(--color-parchment)] p-6 text-center"
-            >
-              <span className="font-[family-name:var(--font-body)] text-xs uppercase tracking-[0.14em] text-[var(--color-gold)]">
-                {label}
-              </span>
-              <p className="mt-3 font-[family-name:var(--font-body)] text-xs text-[var(--color-charcoal)]/45">
-                Coming soon
-              </p>
-            </div>
-          ))}
+          {GALLERY_ITEMS.map((item) =>
+            item.placeholder ? (
+              <div
+                key={item.label}
+                className="flex aspect-[4/5] flex-col items-center justify-center border border-dashed border-[var(--color-ink)]/20 bg-[var(--color-parchment)] p-6 text-center"
+              >
+                <span className="font-[family-name:var(--font-body)] text-xs uppercase tracking-[0.14em] text-[var(--color-gold)]">
+                  {item.label}
+                </span>
+                <p className="mt-3 font-[family-name:var(--font-body)] text-xs text-[var(--color-charcoal)]/45">
+                  {item.caption}
+                </p>
+              </div>
+            ) : (
+              <figure key={item.label} className="group relative aspect-[4/5] overflow-hidden">
+                <img
+                  src={item.img}
+                  alt={item.caption}
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--color-ink)]/90 to-transparent px-4 pb-3 pt-10 font-[family-name:var(--font-body)] text-xs text-[var(--color-cream)] opacity-0 transition-opacity group-hover:opacity-100">
+                  {item.caption}
+                </figcaption>
+              </figure>
+            )
+          )}
         </div>
       </section>
 
